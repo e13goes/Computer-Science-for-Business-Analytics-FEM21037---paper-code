@@ -1,4 +1,4 @@
-# Perform LSH Banding
+# Function to perform LSH 
 performLSHBanding <- function(signatureMatrix, numBands) {
   numRows <- nrow(signatureMatrix)
   numCols <- ncol(signatureMatrix)
@@ -10,7 +10,6 @@ performLSHBanding <- function(signatureMatrix, numBands) {
     endRow <- min(b * rowsPerBand, numRows)
     band <- signatureMatrix[startRow:endRow, , drop = FALSE]
     
-    # Hash buckets for this band
     bandBuckets <- list()
     for (c in 1:numCols) {
       bandHash <- paste(band[, c], collapse = "-")
@@ -21,7 +20,6 @@ performLSHBanding <- function(signatureMatrix, numBands) {
       }
     }
     
-    # Collect candidate pairs
     for (bucket in bandBuckets) {
       if (length(bucket) > 1) {
         candidatePairs <- c(candidatePairs, combn(bucket, 2, simplify = FALSE))
@@ -29,7 +27,6 @@ performLSHBanding <- function(signatureMatrix, numBands) {
     }
   }
   
-  # Remove duplicate pairs
   candidatePairs <- unique(candidatePairs)
   return(candidatePairs)
 }
