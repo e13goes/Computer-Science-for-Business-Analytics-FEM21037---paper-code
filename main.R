@@ -16,7 +16,7 @@ resultsNew <- list()
 F1Measures <- vector()
 numBands <- 1 # change to get different thresholds
 
-# Run bootstraps
+# Perform bootstrapping
 start.time <- Sys.time()
 for (b in 1:nrBootstraps) {
   cat("Bootstrap", b, "\n")
