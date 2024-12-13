@@ -1,4 +1,5 @@
 # Computer-Science-for-Business-Analytics-FEM21037---paper-code
+This project contains code that can be used to perform duplicate detection using MinHashing, LSH, and clustering. 
 
 ## cleanBaseline.R
 This file contains the functions needed to do the cleaning of the data for both the baseline method and the methods presented in the paper.
