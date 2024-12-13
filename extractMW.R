@@ -37,6 +37,7 @@ getModelWordsBaseline <- function(data) {
       MWvalue <- unique(c(MWvalue, valueWords))
     }
   }
+  
   list(MWtitle = MWtitle, MWvalue = MWvalue)
 }
 
@@ -56,5 +57,6 @@ getModelWordsNew <- function(data) {
       MWvalue <- unique(c(MWvalue, valueWords))
     }
   }
+  
   list(MWtitle = MWtitle, MWvalue = MWvalue)
 }
