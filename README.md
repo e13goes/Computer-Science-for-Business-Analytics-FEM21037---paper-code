@@ -30,9 +30,9 @@ This file contains the different regular expressions and functions to extract mo
 
 **normalizeModelWords(modelWords)** : Function to remove the non-numerical parts of the given model words.
 
-**initializeModelWordSetsBaseline(data)** : Function to extract the model words from the titles and key-value pairs of the given data based on the baseline method.
+**getModelWordsBaseline(data)** : Function to extract the model words from the titles and key-value pairs of the given data based on the baseline method.
 
-**initializeModelWordSetsNew(data)** : Function to extract the model words from the titles and key-value pairs of the given data based on the method presented in my paper.
+**getModelWordsNew(data)** : Function to extract the model words from the titles and key-value pairs of the given data based on the method presented in my paper.
 
 ## F1Measure.R
 This file contains the function to calculate the F1-measure (harmonic mean between precision and recall).
@@ -51,6 +51,9 @@ This file contains the functions to calculate the Jaccard similarity and create 
 **sameBrand(product1, product2)** : Function to check whether the given two products share the same brand.
 
 **dissimilarityMatrixNew(data, binaryVectors, candidatePairs)** : Function to set up the dissimilarity matrix based on the given data, binary characteristic vectors, and candidate pairs from LSH. The Jaccard similarity is used as similarity measure.
+
+## main.R
+This file is used to obtain the actual results. It reads in the data and initializes parameter values and lists to hold the results. Then, within each bootstrap, the method is performed as described in the methodology of my paper. After bootstrapping the performance metrics are averaged and displayed. 
 
 ## metricsLSH.R
 This file contains the function to calculate the different performance measures for LSH.
