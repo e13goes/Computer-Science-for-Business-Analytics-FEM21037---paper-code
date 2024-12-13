@@ -21,12 +21,14 @@ adaptedHierarchicalClustering <- function(dissimilarityMatrix, threshold) {
         } else {
           dist <- min(clusterDistances)
         }
+        
         if (dist < minDist) {
           minDist <- dist
           clusterPair <- c(i, j)
         }
       }
     }
+    
     if (minDist > threshold) break
     
     clusterI <- clusters[[clusterPair[1]]]
@@ -36,6 +38,7 @@ adaptedHierarchicalClustering <- function(dissimilarityMatrix, threshold) {
     clusters <- clusters[-clusterPair]
     clusters <- append(clusters, list(mergedCluster))
   }
+  
   return(clusters)
 }
 
@@ -49,6 +52,7 @@ getDuplicatePairs <- function(clusters) {
       duplicatePairs <- append(duplicatePairs, pairs)  
     }
   }
+  
   return(duplicatePairs)
 }
 
