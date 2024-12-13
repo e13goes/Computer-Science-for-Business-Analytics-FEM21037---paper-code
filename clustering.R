@@ -1,7 +1,7 @@
 # Function to perform adapted hierarchical single linkage clustering
 adaptedHierarchicalClustering <- function(dissimilarityMatrix, threshold) {
   n <- nrow(dissimilarityMatrix)
-  clusters <- as.list(1:n)  # Each product starts in its own cluster
+  clusters <- as.list(1:n)  
   diag(dissimilarityMatrix) <- Inf
   
   while (TRUE) {
