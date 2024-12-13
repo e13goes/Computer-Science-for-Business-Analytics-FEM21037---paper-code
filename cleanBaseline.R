@@ -1,4 +1,4 @@
-# Function to normalize units and clean text
+# Function to clean text according to the baseline method
 cleanTextBaseline <- function(text) {
   # Step 1: Normalize "inch" variations
   text <- gsub('(Inch|-Inch|inches|”|"|-inch| inch|inch)', 'inch', text)
