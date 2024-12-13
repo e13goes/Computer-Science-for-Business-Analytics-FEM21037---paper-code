@@ -13,9 +13,11 @@ createBinaryVectors <- function(data, MWtitle, MWvalue) {
       value <- product$featuresMap[[key]]
       valueWords <- extractModelWords(value, modelWordKeyValueRegex)
     }
+    
     valueWords <- normalizeModelWords(valueWords)
     productWords <- unique(c(titleWords, valueWords))
     binaryVectors[rownames(binaryVectors) %in% productWords, i] <- 1
   }
+  
   return(binaryVectors)
 }
