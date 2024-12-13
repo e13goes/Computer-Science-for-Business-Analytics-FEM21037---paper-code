@@ -1,6 +1,5 @@
 # Function to calculate the F1-measure
 F1Measure <- function(trueDuplicates, predictedDuplicates) {
-  
   duplicatesFound <- length(intersect(trueDuplicates, predictedDuplicates))
   totalDuplicates <- length(trueDuplicates)
   totalPredictedDuplicates <- length(predictedDuplicates)
