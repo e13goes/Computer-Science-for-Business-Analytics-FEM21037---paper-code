@@ -27,11 +27,11 @@ for (b in 1:nrBootstraps) {
   dataNewTrain <- dataNew[trainIndices[!duplicated(trainIndices)]]
   cat("Size train data:", length(dataNewTrain), "\n")
   
-  MWBaseline <- initializeModelWordSetsBaseline(dataBaselineTrain)
+  MWBaseline <- getModelWordsBaseline(dataBaselineTrain)
   MWBaselineTitle <- MWBaseline$MWtitle
   MWBaselineValue <- MWBaseline$MWvalue
   
-  MWNew <- initializeModelWordSetsNew(dataNewTrain)
+  MWNew <- getModelWordsNew(dataNewTrain)
   MWNewTitle <- MWNew$MWtitle
   MWNewValue <- MWNew$MWvalue
   
