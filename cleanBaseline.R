@@ -4,6 +4,7 @@ cleanTextBaseline <- function(text) {
   text <- gsub('(Hertz|hertz|Hz|HZ| hz|-hz|hz)', 'hz', text)
   text <- tolower(text)
   text <- gsub('\\s*(?=inch|hz)', '', text, perl = TRUE)
+  
   return(text)
 }
 
@@ -15,6 +16,7 @@ cleanTitles <- function(title) {
   title <- gsub('\\s*(?=inch|hz)', '', title, perl = TRUE)
   title <- gsub("\\[|\\]|\\(|\\)|\\{|\\}|/|-|–", "", title) 
   title <- trimws(title)
+  
   return(title)
 }
 
@@ -30,6 +32,7 @@ cleanDatasetBaseline <- function(data) {
       data[[i]]$featuresMap[[key]] <- cleanedValue
     }
   }
+  
   return(data)
 }
 
@@ -45,5 +48,6 @@ cleanDatasetNew <- function(data) {
       data[[i]]$featuresMap[[key]] <- cleanedValue
     }
   }
+  
   return(data)
 }
