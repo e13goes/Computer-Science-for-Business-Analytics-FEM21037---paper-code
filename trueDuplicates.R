@@ -1,4 +1,4 @@
-# To uncover the true duplicates
+# Function to get true duplicates
 getTrueDuplicates <- function(data) {
   trueDuplicates <- list()
   
