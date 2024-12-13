@@ -55,6 +55,8 @@ This file contains the functions to calculate the Jaccard similarity and create 
 ## main.R
 This file is used to obtain the actual results. It reads in the data and initializes parameter values and lists to hold the results. Then, within each bootstrap, the method is performed as described in the methodology of my paper. After bootstrapping the performance metrics are averaged and displayed. 
 
+To obtain results for different values of the threshold t, the variable **numBands** can be changed accordingly.
+
 ## metricsLSH.R
 This file contains the function to calculate the different performance measures for LSH.
 
