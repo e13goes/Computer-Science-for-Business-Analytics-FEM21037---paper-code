@@ -1,4 +1,4 @@
-# Computer-Science-for-Business-Analytics-FEM21037---paper-code
+# Computer Science for Business Analytics (FEM21037) paper - code
 This project contains code that can be used to perform duplicate detection using MinHashing, LSH, and clustering. 
 
 ## cleanBaseline.R
